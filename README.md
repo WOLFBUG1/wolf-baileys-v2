@@ -1,15 +1,15 @@
 <div align="center">
 
-# @qwerty-xcv/baileys
+# @wolfbug1/wolf-baileys-v2
 
 A WebSocket-based library for interacting with WhatsApp Web — a fork of
 [Baileys](https://github.com/WhiskeySockets/Baileys) with additional socket layers
 (Communities, Interop, Privacy, GraphQL) and helpers for special message types
 such as payments, products, albums, events, poll results, and order messages.
 
-[![npm version](https://img.shields.io/npm/v/@qwerty-xcv/baileys.svg)](https://www.npmjs.com/package/@qwerty-xcv/baileys)
+[![npm version](https://img.shields.io/npm/v/@wolfbug1/wolf-baileys-v2.svg)](https://www.npmjs.com/package/@wolfbug1/wolf-baileys-v2)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/@qwerty-xcv/baileys.svg)](https://www.npmjs.com/package/@qwerty-xcv/baileys)
+[![Downloads](https://img.shields.io/npm/dm/@wolfbug1/wolf-baileys-v2.svg)](https://www.npmjs.com/package/@wolfbug1/wolf-baileys-v2)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](package.json)
 
 [Donation](https://www.zeppeli.my.id) · [API Reference](docs/API.md)
@@ -37,6 +37,7 @@ such as payments, products, albums, events, poll results, and order messages.
 - [Examples](#examples)
 - [Known Limitations](#known-limitations)
 - [Contributing](#contributing)
+- [Upstream / Credits](#upstream--credits)
 - [License](#license)
 
 ## Requirements
@@ -50,23 +51,23 @@ such as payments, products, albums, events, poll results, and order messages.
 ## Installation
 
 ```bash
-npm install @qwerty-xcv/baileys
+npm install github:WOLFBUG1/wolf-baileys-v2
 ```
 
-You can also add it to your package manifest as `baileys` or `@whiskeysockets/baileys`:
+You can also add it to your package manifest using the maintained fork's package identity:
 
 ```json
 {
   "dependencies": {
-    "@qwerty-xcv/baileys": "github:XazepysK/wbails"
+    "@wolfbug1/wolf-baileys-v2": "github:WOLFBUG1/wolf-baileys-v2"
   }
 }
 ```
 
 ```js
-import makeWASocket from '@qwerty-xcv/baileys'
+import makeWASocket from '@wolfbug1/wolf-baileys-v2'
 // or with CommonJS:
-const { default: makeWASocket } = require('@qwerty-xcv/baileys')
+const { default: makeWASocket } = require('@wolfbug1/wolf-baileys-v2')
 ```
 
 ## Quick Start
@@ -74,7 +75,7 @@ const { default: makeWASocket } = require('@qwerty-xcv/baileys')
 ### Login with QR Code
 
 ```js
-import makeWASocket, { Browsers, useMultiFileAuthState } from '@qwerty-xcv/baileys'
+import makeWASocket, { Browsers, useMultiFileAuthState } from '@wolfbug1/wolf-baileys-v2'
 
 const { state, saveCreds } = await useMultiFileAuthState('auth_info')
 
@@ -90,7 +91,7 @@ client.ev.on('creds.update', saveCreds)
 ### Login with Pairing Code
 
 ```js
-import makeWASocket, { Browsers, fetchLatestWAWebVersion, useMultiFileAuthState } from '@qwerty-xcv/baileys'
+import makeWASocket, { Browsers, fetchLatestWAWebVersion, useMultiFileAuthState } from '@wolfbug1/wolf-baileys-v2'
 
 const { state, saveCreds } = await useMultiFileAuthState('auth_info')
 const { version } = await fetchLatestWAWebVersion()
@@ -119,7 +120,7 @@ if (!client.authState?.creds?.registered) {
 which Baileys does not persist automatically by default.
 
 ```js
-import makeWASocket, { makeInMemoryStore } from '@qwerty-xcv/baileys'
+import makeWASocket, { makeInMemoryStore } from '@wolfbug1/wolf-baileys-v2'
 import pino from 'pino'
 
 const store = makeInMemoryStore({
@@ -321,6 +322,14 @@ npm test
     </td>
   </tr>
 </table>
+
+## Upstream / Credits
+
+This project is an independently maintained fork based on the Baileys ecosystem
+and the [XazepysK/wbails](https://github.com/XazepysK/wbails) codebase.
+
+- Upstream: https://github.com/XazepysK/wbails
+- Maintained fork: https://github.com/WOLFBUG1/wolf-baileys-v2
 
 ## License
 

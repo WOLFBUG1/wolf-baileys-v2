@@ -1,5 +1,5 @@
 {
-  "name": "wbails",
+  "name": "@wolfbug1/wolf-baileys-v2",
   "type": "module",
   "version": "0.0.3",
   "publishConfig": {
@@ -15,13 +15,16 @@
     "wa-bot",
     "websocket"
   ],
-  "homepage": "https://github.com/XazepysK/wbails",
+  "homepage": "https://github.com/WOLFBUG1/wolf-baileys-v2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XazepysK/wbails.git"
+    "url": "git+https://github.com/WOLFBUG1/wolf-baileys-v2.git"
   },
   "license": "MIT",
   "author": "Rajeh Taher - 7eppsynC",
+  "maintainers": [
+    "WOLFBUG1"
+  ],
   "main": "lib/index.js",
   "files": [
     "lib/**/*",
