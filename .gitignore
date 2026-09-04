@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+credentials/
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# WhatsApp/Baileys authentication and session state
+auth/
+session/
+sessions/
+auth_info_baileys/
+baileys_auth_info/
+
+# Runtime databases
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Logs, caches, coverage, and temporary files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+coverage/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
